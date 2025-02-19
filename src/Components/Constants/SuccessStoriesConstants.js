@@ -1,0 +1,1 @@
+export const SUCCESS_HEADING = "Success Stories";
