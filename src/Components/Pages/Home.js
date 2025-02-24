@@ -2,7 +2,6 @@ import React from "react";
 import Intro from "../Intro";
 import Footer from "../Footer";
 import NewsLetter from "../NewsLetter/NewsLetter";
-import propertySalesCardArray from "../Arrays/PropertySaleCardArray";
 import AbouComp from "../About/AbouComp";
 import PropertySalesCard from "../PropertSalesCard";
 import SucessStories from "../SucessStories";

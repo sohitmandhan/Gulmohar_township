@@ -1,9 +1,27 @@
+import sitting from "../../Images/sitting.png";
+import family from "../../Images/family.png";
+import solo from "../../Images/solo.png"
+
 export const ABOUT_TEXT = {
-    title: "Gulmohar Township",
-    subtitle: "TRUSTED GLOBAL ADVISOR",
-    description1:
-      "Gulmohar Township started his real estate career in 2002, and later expanded his expertise by becoming a corporate lawyer. He has been recognized as one of the Best Real Estate Professionals in America by The Wall Street Journal and is in the top 1.5% of all agents.",
-    description2:
-      "Gulmohar Township is an accomplished real estate agent with the experience and talent you need to make your Nashville real estate dreams come true. Contact Nashville real estate agent & luxury realtor, Gulmohar Township to sell property & find houses & homes for sale in Green Hills, Oak Hill, Belle Meade, Forest Hills & more.",
-  };
-  
+  section1: {
+    title: "A TOP PRODUCING AGENT & TRUSTED ADVISOR",
+    description:
+      "Buying a luxury home can be an exciting process, but one that often comes with its fair share of challenges...",
+    image: sitting,
+    showButtons: true,
+  },
+  section2: {
+    title: "A FAMILY MAN & TENNIS ENTHUSIAST",
+    description:
+      "These days, Gulmohar Township works with his Nashville real estate clients to buy and sell exquisite homes...",
+    image: family,
+    showButtons: false,
+  },
+  section3: {
+    title: "A Top Producing Agent & Trusted Advisor",
+    description:
+      "Buying a luxury home can be an exciting process, but one that often comes with its fair share of challenges. When you have the right realtor on your side, however, buying or selling a luxury home becomes a true pleasure. Gulmohar Township Hatef is an accomplished real estate agent with the experience and talent you need to make your Nashville real estate dreams come true.",
+      image: solo,
+      showButtons: false
+  },
+};

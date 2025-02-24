@@ -1,21 +1,27 @@
-import React from 'react';
-import { HOME_IMAGE, LOGO_IMAGE, WELCOME_TEXT, TOWNSHIP_NAME_INTRO, DESCRIPTION_INTRO, SEARCH_BUTTON_TEXT } from './Constants/IntroConstants';
-import Buttons from './Buttons';
+import React from "react";
+import { useLocation } from "react-router-dom";
+import { PAGE_CONTENT } from "./Constants/IntroConstants";
+import Buttons from "./Buttons";
+
 const Intro = () => {
+  const location = useLocation();
+  const { backgroundImage, welcomeText, title, description, buttonText } =
+    PAGE_CONTENT[location.pathname] || PAGE_CONTENT["/"]; // Default to Home
+
   return (
-    <div>
-      <img className='absolute inset-0 w-full h-full object-fill' src={HOME_IMAGE} alt='background image' />
-      <div className='bg-black relative bg-opacity-50 text-white'>
-        <img className='w-28 h-28 relative' src={LOGO_IMAGE} alt='logo' />
-        <div className='p-48 text-center'>
-          <h4>{WELCOME_TEXT}</h4>
-          <h1 className='text-6xl p-10'>{TOWNSHIP_NAME_INTRO}</h1>
-          <p className='text-balance'>{DESCRIPTION_INTRO}</p>
-          <Buttons text={SEARCH_BUTTON_TEXT} color="white" className="border-white" />
-        </div>
+    <div className="relative w-full min-h-[80vh] flex flex-col justify-center items-center">
+      {/* Dynamic Background Image */}
+      <img className="absolute inset-0 w-full h-full object-cover" src={backgroundImage} alt="background" />
+
+      {/* Overlay & Content */}
+      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-4">
+        <h4>{welcomeText}</h4>
+        <h1 className="text-6xl p-6">{title}</h1>
+        <p className="text-lg">{description}</p>
+        {buttonText && <Buttons text={buttonText} color="white" className="border-white mt-6" />}
       </div>
     </div>
   );
-}
+};
 
 export default Intro;
