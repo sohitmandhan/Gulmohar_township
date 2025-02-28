@@ -32,10 +32,7 @@ const Filters = ({ onFilterChange = () => {}, filters, setFilters  }) => {
       <select className="w-1/3 p-2 border rounded">
         <option>Bedrooms</option>
       </select>
-
-      {/* Range Sliders - Distance & Price */}
       <div className="w-2/5 mt-4 flex flex-col">
-        {/* Distance Slider */}
         <label className="text-sm">Distance: {distance} miles</label>
         <input
           type="range"
@@ -46,9 +43,7 @@ const Filters = ({ onFilterChange = () => {}, filters, setFilters  }) => {
           className="w-full mt-1 cursor-pointer accent-black"
         />
       </div>
-
       <div className="w-2/5 mt-4 flex flex-col">
-        {/* Price Slider */}
         <label className="text-sm">Max Price: ${price.toLocaleString()}</label>
         <input
           type="range"

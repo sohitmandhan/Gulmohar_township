@@ -6,8 +6,10 @@ import AbouComp from "../About/AbouComp";
 import PropertySalesCard from "../PropertSalesCard";
 import SucessStories from "../SucessStories";
 import MarketingConnection from "../MarketingConnection";
-import Slider from "../Slider";
+import Slider from "../Slider/FullScreenSlider";
 import Communities from "../Communities";
+import CardSlider from "../Slider/CardSlider";
+import FullScreenSlider from "../Slider/FullScreenSlider";
 
 const Home = () => {
   return (
@@ -19,14 +21,14 @@ const Home = () => {
       </div>
       <AbouComp />
       <MarketingConnection />
-      <Slider visibilityFactor='x' />
+      <FullScreenSlider />
         <div className="text-center flex justify-evenly p-16">
           <PropertySalesCard visibilityFactor="x" /> 
         </div>
         <SucessStories />
         <Communities />
         <div className="p-14 m-14 text-center">
-        <Slider visibilityFactor='y' />
+        <CardSlider />
         </div>
       <NewsLetter />
       <Footer />

@@ -1,38 +1,41 @@
 import React from "react";
 import propertySalesCardArray from "./Arrays/PropertySaleCardArray";
-import { HOME_PAGE_HEADING, HOME_PAGE_SUB_HEADING, HOME_PAGE_TITLE } from "./Constants/homeConstants";
+import {
+  HOME_PAGE_HEADING,
+  HOME_PAGE_SUB_HEADING,
+  HOME_PAGE_TITLE,
+} from "./Constants/homeConstants";
 import Buttons from "./Buttons";
 import { useNavigate } from "react-router-dom";
 
 const PropertySalesCard = ({ visibilityFactor }) => {
-  
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const visibleCards = propertySalesCardArray.filter(
     (card) => card.visibilityFactor === visibilityFactor
   );
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col items-center py-10">
       {visibilityFactor === "x" ? (
-        <div>
-          <h1>{HOME_PAGE_HEADING}</h1>
-          <p>{HOME_PAGE_SUB_HEADING}</p>
+        <div className="text-center">
+          <h1 className="text-3xl font-bold">{HOME_PAGE_HEADING}</h1>
+          <p className="text-lg text-gray-600 mt-2">{HOME_PAGE_SUB_HEADING}</p>
         </div>
       ) : (
-        <div>
-          <h1>{HOME_PAGE_TITLE}</h1>
+        <div className="text-center">
+          <h1 className="text-3xl font-bold">{HOME_PAGE_TITLE}</h1>
         </div>
       )}
-      <div className="flex">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
         {visibleCards.map((card) => (
-          <div className="p-6 w-80 relative">
-            <div className="relative">
+          <div key={card.id} className="relative w-full max-w-sm">
+            <div className="relative overflow-hidden group shadow-lg">
               <img
                 src={card.src}
                 alt="Property"
-                className={`w-full h-full object-cover ${
-                  card.visibilityFactor === "y" ? "shadow-lg" : ""
+                className={`w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110 ${
+                  card.visibilityFactor === "x" ? "shadow-lg" : ""
                 }`}
               />
               {visibilityFactor === "x" ? (
@@ -45,7 +48,7 @@ const PropertySalesCard = ({ visibilityFactor }) => {
                   </div>
                 </>
               ) : (
-                <h3 className="absolute inset-0 flex items-end justify-center text-white text-xl font-bold bg-black bg-opacity-50 pb-6">
+                <h3 className="absolute inset-0 flex items-end justify-center text-white text-xl font-bold pb-6 bg-opacity-0 transition-all duration-500 ease-in-out group-hover:bg-black group-hover:bg-opacity-50 group-hover:items-center">
                   {card.saleTag}
                 </h3>
               )}
@@ -61,8 +64,13 @@ const PropertySalesCard = ({ visibilityFactor }) => {
         ))}
       </div>
       {visibilityFactor === "x" && (
-        <div>
-          <Buttons text="SEARCH ALL HOMES" color="white" clicked={() => navigate('/homeforsale')}/>
+        <div className="">
+          <Buttons
+            text="SEARCH ALL HOMES"
+            color="white"
+            clicked={() => navigate("/homeforsale")}
+            className="border border-black px-6 py-3 text-sm uppercase tracking-wide hover:bg-black hover:text-white transition-all"
+          />
         </div>
       )}
     </div>

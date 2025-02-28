@@ -1,60 +1,39 @@
 import SliderImage from "../../Images/Slider_Image.jpg.png";
-import cardSliderImage_1 from "../../Images/header-photo.png";
-import cardSliderImage_2 from "../../Images/header-photo-2.png";
-import cardSliderImage_3 from "../../Images/header-photo-3.png";
 
-const ImageSliderArray = [
+const FullScreenSliderData = [
   {
+    id: 1,
     src: SliderImage,
-    specs: "$1,866,000 | 5 Beds | 5 Baths | 4,307 Sq.Ft.",
     address: "744A Bresslyn Rd",
-    visibilityFactor: 'x'
+    price: "$1,866,000",
+    beds: "5 Beds",
+    baths: "5 Baths",
+    area: "4,307 Sq.Ft.",
+    description:
+      "Stunning 5-bedroom residence nestled in the heart of Nashville's desirable Hillwood neighborhood. Originally constructed in 2014 with timeless architecture, this home has been meticulously updated in 2022 with new millwork, fresh paint, and designer lighting on the main level, seamlessly blending classic charm with modern elegance.",
   },
   {
+    id: 2,
     src: SliderImage,
-    specs: "$1,866,000 | 5 Beds | 5 Baths | 4,307 Sq.Ft.",
-    address: "744A Bresslyn Rd",
-    visibilityFactor: 'x'
+    address: "1589 Belle Meade Blvd",
+    price: "$2,450,000",
+    beds: "6 Beds",
+    baths: "6 Baths",
+    area: "5,625 Sq.Ft.",
+    description:
+      "A breathtaking estate in Belle Meade, offering luxurious living with a spacious open floor plan, high-end finishes, and a private outdoor oasis featuring a pool, fire pit, and landscaped gardens. A perfect balance of privacy and convenience in one of the city's most prestigious areas.",
   },
   {
+    id: 3,
     src: SliderImage,
-    specs: "$1,866,000 | 5 Beds | 5 Baths | 4,307 Sq.Ft.",
-    address: "744A Bresslyn Rd",
-    visibilityFactor: 'x'
-  },
-  {
-    src: SliderImage,
-    specs: "$1,866,000 | 5 Beds | 5 Baths | 4,307 Sq.Ft.",
-    address: "744A Bresslyn Rd",
-    visibilityFactor: 'x'
-  },
-  {
-    src: SliderImage,
-    specs: "$1,866,000 | 5 Beds | 5 Baths | 4,307 Sq.Ft.",
-    address: "744A Bresslyn Rd",
-    visibilityFactor: 'x'
-  },
-  {
-    src: cardSliderImage_1,
-    heading: "Everything You Need to Know About Getting Your Home Inspected Before Selling",
-    detail: "Navigating the Pre-Sale Inspection Process: Essential Insights for Sellers.",
-    readMore: "Read More",
-    visibilityFactor: 'y',
-  },
-  {
-    src: cardSliderImage_2,
-    heading: "The Ultimate Guide to Home Inspection Before Buying",
-    detail: "Unlocking Insights: Mastering the Home Inspection Process Before Buying.",
-    readMore: "Read More",
-    visibilityFactor: 'y',
-  },
-  {
-    src: cardSliderImage_3,
-    heading: "Tips For Buying and Selling A Home At the Same Time",
-    detail: "Balancing Acts: Strategies for Seamlessly Transitioning Between Homes.",
-    readMore: "Read More",
-    visibilityFactor: 'y',
+    address: "3721 Woodmont Blvd",
+    price: "$1,990,000",
+    beds: "4 Beds",
+    baths: "4.5 Baths",
+    area: "4,850 Sq.Ft.",
+    description:
+      "An architectural masterpiece with a modern farmhouse design, this home boasts floor-to-ceiling windows, vaulted ceilings, and a chef’s kitchen. Located in the coveted Green Hills neighborhood, this property is perfect for entertaining with an expansive backyard and patio space.",
   },
 ];
 
-export default ImageSliderArray
+export default FullScreenSliderData;

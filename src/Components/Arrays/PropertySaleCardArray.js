@@ -35,18 +35,45 @@ const propertySalesCardArray = [
   },
   {
     id: 4,
+    saleTag: "FOR SALE",
+    amount: "$15,200,000",
+    address: "533 Belle Meade Blvd, Nashville, TN 37205",
+    specs: "6 Beds, 9 Baths, 9,408 Sq.Ft.",
+    src: Villa_1,
+    visibilityFactor: 'x'
+  },
+  {
+    id: 5,
+    saleTag: "FOR SALE",
+    amount: "$16,200,000",
+    address: "534 Belle Meade Blvd, Nashville, TN 37205",
+    specs: "5 Beds, 6 Baths, 6,408 Sq.Ft.",
+    src: Villa_2,
+    visibilityFactor: 'x'
+  },
+  {
+    id: 6,
+    saleTag: "FOR SALE",
+    amount: "$17,200,000",
+    address: "535 Belle Meade Blvd, Nashville, TN 37205",
+    specs: "4 Beds, 3 Baths, 3,408 Sq.Ft.",
+    src: Villa_3,
+    visibilityFactor: 'x'
+  },
+  {
+    id: 7,
     src: cardImage_1,
     saleTag: "Exclusive Listings",
     visibilityFactor: 'y'
   },
   {
-    id: 5,
+    id: 8,
     src: cardImage_2,
     saleTag: "Your Home's Worth",
     visibilityFactor: 'y'
   },
   {
-    id: 6,
+    id: 9,
     src: cardImage_3,
     saleTag: "Market Trends",
     visibilityFactor: 'y'

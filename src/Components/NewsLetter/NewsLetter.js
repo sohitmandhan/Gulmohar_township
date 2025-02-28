@@ -6,12 +6,18 @@ import { SECTION_IMAGE } from '../Constants/newsConstants';
 const NewsLetter = () => {
   return (
     <div className="relative w-full">
-      <img src={SECTION_IMAGE} alt="section background" 
-        className="absolute top-0 left-0 w-full h-full object-cover z-0" 
+      {/* Background Image */}
+      <img 
+        src={SECTION_IMAGE} 
+        alt="section background" 
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
       />
+      {/* Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 z-10"></div>
-      <div className="relative p-8 lg:p-28 z-20">
-        <div className="flex flex-col lg:flex-row justify-between">
+
+      {/* Content */}
+      <div className="relative p-6 md:p-12 lg:p-28 z-20">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-10">
           <LeftSection />
           <RightSection />
         </div>
